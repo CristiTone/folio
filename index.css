@@ -26,7 +26,7 @@ body {
   height: 100vh;
 }
 
-body * {
+body *:not(a) {
   transition: 0.2s;
 }
 
@@ -164,7 +164,7 @@ input:checked + .slider:before {
 .contact-form {
   position: relative;
   top: 60px;
-  height: 350px;
+  height: 400px;
   width: 350px;
   z-index: 100;
   animation: slideInFromRight 1s ease-in;
@@ -179,6 +179,7 @@ input:checked + .slider:before {
 }
 
 .contact-form input[type='text'],
+.contact-form textarea,
 .contact-form input[type='email'] {
   border: 0;
   border-bottom: 1px solid var(--input-border-color);
@@ -186,16 +187,24 @@ input:checked + .slider:before {
   padding: 3px;
   font-size: 16px;
   background-color: var(--light-color);
+  color: var(--secondary-text-color);
+  font-family: 'Roboto Slab', serif;
 }
 
-.contact-form input[type='text'],
-.contact-form input[type='email'] {
+.contact-form input[type='text']::placeholder,
+.contact-form textarea::placeholder,
+.contact-form input[type='email']::placeholder {
   color: var(--secondary-text-color);
   opacity: 0.4;
 }
 
-.contact-form input:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
 }
 
 .contact::before,

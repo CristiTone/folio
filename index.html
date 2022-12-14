@@ -52,13 +52,18 @@
 
         <div class="contact-form card">
           <h2>Get In Touch</h2>
-          <form name="contact" method="POST" data-netlify="" true>
+          <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <div class="form-control">
               <input type="text" name="name" placeholder="Name" />
             </div>
             <div class="form-control">
-              <input type="text" name="message" placeholder="Message" />
+              <textarea
+                type="text"
+                name="message"
+                placeholder="Message"
+                rows="5"
+              ></textarea>
             </div>
             <div class="form-control">
               <input type="email" name="email" placeholder="Email" />
